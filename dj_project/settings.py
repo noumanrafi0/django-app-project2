@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "task3",
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "task3.middleware.CustomAuthMiddleware",
 ]
 
 ROOT_URLCONF = "dj_project.urls"
@@ -142,3 +144,5 @@ LOGGING = {
         },
     },
 }
+
+AUTH_USER_MODEL = "task3.CustomUser"
