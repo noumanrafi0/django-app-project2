@@ -49,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "task3.middleware.CustomAuthMiddleware",
+    "task3.middleware.RequestLogMiddleware",
 ]
 
 ROOT_URLCONF = "dj_project.urls"
