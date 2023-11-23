@@ -3,8 +3,8 @@ from django.contrib import admin
 from .models import CustomUser
 
 
-class AuthorAdmin(admin.ModelAdmin):
+class CustomUserAdmin(admin.ModelAdmin):
     pass
 
 
-admin.site.register(CustomUser, AuthorAdmin)
+admin.site.register(CustomUser, CustomUserAdmin)
