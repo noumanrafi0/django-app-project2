@@ -4,21 +4,18 @@ repos:
     hooks:
       - id: flake8
         exclude: |
-          (?x)^(
-              .*\b(migrations)\b.*$|
-              dj_project/settings.py|
-          )$
+          (?x)^(dj_project/settings.*|.*/migrations/.*)$
 
   - repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
       - id: isort
+        exclude: |
+          (?x)^(.*/migrations/.*)$
 
   - repo: https://github.com/psf/black
     rev: 23.10.1
     hooks:
       - id: black
         exclude: |
-          (?x)^(
-              base_project/.*/migrations/.*|
-          )
+          (?x)^(.*/migrations/.*)$
